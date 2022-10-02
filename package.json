@@ -1,12 +1,12 @@
 {
-	"name": "signageos-vscode-sops",
-	"displayName": "@signageos/vscode-sops",
+	"name": "cronjevh-vscode-spc",
+	"displayName": "@cronjevh/vscode-spc",
 	"description": "",
-	"publisher": "signageos",
-	"version": "0.6.1",
+	"publisher": "cronjevh",
+	"version": "0.0.1",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/signageos/vscode-sops"
+		"url": "https://github.com/cronjevh/vscode-spc"
 	},
 	"engines": {
 		"vscode": "^1.50.0"
@@ -22,60 +22,18 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "sops.info",
+				"command": "scp.info",
 				"title": "SOPS info"
-			},
-			{
-				"command": "sops.enable_beta",
-				"title": "SOPS enable BETA"
-			},
-			{
-				"command": "sops.disable_beta",
-				"title": "SOPS rollback STABLE version (disable BETA)"
 			}
 		],
 		"configuration": {
-			"title": "SOPS",
+			"title": "SCP",
 			"properties": {
-				"sops.enabled": {
+				"scp.enabled": {
 					"type": "boolean",
 					"scope": "resource",
 					"default": true,
 					"description": "enable/disable this extension (default: true)"
-				},
-				"sops.beta": {
-					"type": "boolean",
-					"scope": "resource",
-					"default": false,
-					"description": "enable/disable beta release to be activated instead of latest stable release in real time (default: false)"
-				},
-				"sops.creationEnabled": {
-					"type": "boolean",
-					"scope": "resource",
-					"default": false,
-					"description": "enable/disable this extension to try encrypt files included in .sops.yaml path_regex when is not encrypted yet (default: false)"
-				},
-				"sops.binPath": {
-					"type": "string",
-					"scope": "resource",
-					"default": "sops",
-					"description": "Path to SOPS binary (default: executables from `$PATH`)"
-				},
-				"sops.configPath": {
-					"type": "string",
-					"scope": "resource",
-					"default": "./.sopsrc",
-					"description": "Absolute path (Starts with /) or Relative path to project (Starts with ./) where the configuration for this extension is looking for (default: Looking for file `.sopsrc` in root of project) See [Config file](#config-file) section."
-				},
-				"sops.defaults.awsProfile": {
-					"type": "string",
-					"scope": "resource",
-					"description": "Default AWS profile name which will be used for sops command `--aws-profile` (default: uses from environment variable `$AWS_PROFILE`)"
-				},
-				"sops.defaults.gcpCredentialsPath": {
-					"type": "string",
-					"scope": "resource",
-					"description": "Default path used to find GCP credentials. Overwrites the `$GOOGLE_APPLICATION_CREDENTIALS` environment variable (default: uses from environment variable `$GOOGLE_APPLICATION_CREDENTIALS`)"
 				}
 			}
 		}
